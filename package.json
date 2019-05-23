@@ -1,0 +1,39 @@
+{
+  "private": true,
+  "scripts": {
+    "app:build": "zeroconfig-webapp-scripts build app",
+    "app:start": "zeroconfig-webapp-scripts start app",
+    "storybook:start": "start-storybook",
+    "storybook:build": "build-storybook",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "build": "npm run app:build",
+    "start": "npm run app:start",
+    "test": "jest --colors",
+    "test:e2e:build": "sh e2e/build.sh"
+  },
+  "jest": {
+    "preset": "react-zeroconfig"
+  },
+  "pre-commit": [
+    "test"
+  ],
+  "dependencies": {
+    "@loadable/component": "^5.10.1",
+    "@loadable/server": "^5.9.0",
+    "koa": "^2.7.0",
+    "koa-router": "^7.4.0",
+    "react": "^16.8.6",
+    "react-app-polyfill": "^1.0.1",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@storybook/react": "^5.0.11",
+    "cypress": "^3.3.1",
+    "jest": "^24.8.0",
+    "pre-commit": "^1.2.2",
+    "react-zeroconfig": "^3.0.1",
+    "tslint": "^5.16.0",
+    "tslint-ssen-rules": "^1.3.0"
+  }
+}
