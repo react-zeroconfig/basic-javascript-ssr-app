@@ -31,7 +31,7 @@ app.listen(port, () => {
 // render
 // ---------------------------------------------
 export async function render(ctx, initialState) {
-  const stats = require('loadable-stats.json');
+  const stats = require('@loadable/stats.json');
   const extractor = new ChunkExtractor({stats, entrypoints: 'app'});
   
   const body = renderToString((
