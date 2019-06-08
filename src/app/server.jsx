@@ -5,7 +5,7 @@ import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { App } from './app';
 
-const port = Number(process.env.PORT || process.env.SERVER_PORT || 4100);
+const port = Number(process.env.SERVER_PORT || 4100);
 
 const app = new Koa();
 const router = new Router();
