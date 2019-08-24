@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Title } from './components/Title';
 
-require('./style.scss');
-
 export function App({initialState}) {
   const [value, setValue] = useState(() => initialState.serverValue);
   
