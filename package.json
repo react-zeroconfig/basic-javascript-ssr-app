@@ -49,6 +49,6 @@
     "lint-staged": "^9.2.3",
     "markdown-source-import": "^1.1.0",
     "puppeteer": "^1.19.0",
-    "react-zeroconfig": "^3.15.0-alpha.3"
+    "react-zeroconfig": "^3.15.0"
   }
 }

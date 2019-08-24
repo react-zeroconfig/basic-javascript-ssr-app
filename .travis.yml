@@ -12,12 +12,14 @@ before_install:
   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
 script:
   - npm start &
-  - sleep 30
+  - sleep 30 # wating start SSR servers
   - npm run lint
   - npm run test
 after_success:
   - npm run build
   - npm run storybook:build
+after_failure:
+  - travis_terminate 1 # force terminate travis
 notifications:
   email:
     on_success: never
