@@ -53,7 +53,7 @@ Add NginX server config
 # Source Import Sample
 
 ## Jest 
-<!-- import src/__tests__/*.js --title-tag h3 -->
+<!-- import src/__tests__/*.{js,jsx} --title-tag h3 -->
 <h3>src/__tests__/e2e.js</h3>
 ```js
 import puppeteer from 'puppeteer';
@@ -82,11 +82,11 @@ describe('Sample', () => {
 ```
 <!-- importend -->
 
-<!-- import src/**/*.test.js --title-tag h3 -->
+<!-- import src/**/*.test.{js,jsx} --title-tag h3 -->
 <!-- importend -->
 
 ## Storybook
-<!-- import src/**/*.stories.jsx --title-tag h3 -->
+<!-- import src/**/*.stories.{js,jsx} --title-tag h3 -->
 <h3>src/app/components/Title.stories.jsx</h3>
 ```jsx
 import { storiesOf } from '@storybook/react';
