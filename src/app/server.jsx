@@ -13,7 +13,7 @@ const router = new Router();
 // ---------------------------------------------
 // router
 // ---------------------------------------------
-router.get('/', async (ctx) => {
+router.get('/', async ctx => {
   ctx.body = await render(ctx, {
     serverValue: 'SERVER VALUE',
   });
@@ -32,14 +32,14 @@ app.listen(port, () => {
 // ---------------------------------------------
 export async function render(ctx, initialState) {
   const stats = require('@loadable/stats.json');
-  const extractor = new ChunkExtractor({stats, entrypoints: 'app'});
-  
-  const body = renderToString((
+  const extractor = new ChunkExtractor({ stats, entrypoints: 'app' });
+
+  const body = renderToString(
     <ChunkExtractorManager extractor={extractor}>
-      <App initialState={initialState}/>
-    </ChunkExtractorManager>
-  ));
-  
+      <App initialState={initialState} />
+    </ChunkExtractorManager>,
+  );
+
   return template({
     body,
     initialState: JSON.stringify(initialState),
@@ -50,7 +50,7 @@ export async function render(ctx, initialState) {
 // ---------------------------------------------
 // template
 // ---------------------------------------------
-export const template = ({body, initialState, extractor}) => `
+export const template = ({ body, initialState, extractor }) => `
 <!DOCTYPE html>
 <html lang="en">
   <head>

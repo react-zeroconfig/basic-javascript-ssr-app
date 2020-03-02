@@ -63,17 +63,18 @@ import puppeteer from 'puppeteer';
 
 describe('E2E Sample', () => {
   test('Test', async () => {
-    const browser = await puppeteer.launch({headless: true});
+    const browser = await puppeteer.launch({ headless: true });
     const page = await browser.newPage();
-    
+
     await page.goto('http://localhost:3100');
     await page.waitForSelector('#app > h1');
-    
+
     await expect(page.$eval('#app > h1', e => e.innerHTML)).resolves.toEqual('SERVER VALUE');
-    
+
     await browser.close();
   });
 });
+
 ```
 
 
@@ -86,6 +87,7 @@ describe('Sample', () => {
     expect('text').toEqual('text');
   });
 });
+
 ```
 
 <!-- importend -->
@@ -105,12 +107,9 @@ import React from 'react';
 import { Title } from './Title';
 
 storiesOf('Title', module)
-  .add('text=Hello?', () => (
-    <Title text="Hello?"/>
-  ))
-  .add('text=World?', () => (
-    <Title text="World?"/>
-  ));
+  .add('text=Hello?', () => <Title text="Hello?" />)
+  .add('text=World?', () => <Title text="World?" />);
+
 ```
 
 <!-- importend -->
