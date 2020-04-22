@@ -13,7 +13,7 @@ const router = new Router();
 // ---------------------------------------------
 // router
 // ---------------------------------------------
-router.get('/', async ctx => {
+router.get('/', async (ctx) => {
   ctx.body = await render(ctx, {
     serverValue: 'SERVER VALUE',
   });

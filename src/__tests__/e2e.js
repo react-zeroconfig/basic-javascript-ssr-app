@@ -8,7 +8,7 @@ describe('E2E Sample', () => {
     await page.goto('http://localhost:3100');
     await page.waitForSelector('#app > h1');
 
-    await expect(page.$eval('#app > h1', e => e.innerHTML)).resolves.toEqual('SERVER VALUE');
+    await expect(page.$eval('#app > h1', (e) => e.innerHTML)).resolves.toEqual('SERVER VALUE');
 
     await browser.close();
   });
